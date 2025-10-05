@@ -1,0 +1,87 @@
+{
+  "driver_id": "uc_intg_vlc",
+  "version": "1.0.0",
+  "min_core_api": "0.20.0",
+  "name": {
+    "en": "VLC Media Player"
+  },
+  "icon": "uc:play-circle",
+  "description": {
+    "en": "Integration for VLC Media Player with rich metadata and album artwork support via HTTP interface"
+  },
+  "developer": {
+    "name": "Meir Miyara",
+    "email": "meir.miyara@gmail.com"
+  },
+  "home_page": "https://github.com/mase1981/uc-intg-vlc",
+  "setup_data_schema": {
+    "title": {
+      "en": "VLC Player Setup"
+    },
+    "settings": [
+      {
+        "id": "host",
+        "label": {
+          "en": "VLC Player IP Address"
+        },
+        "field": {
+          "text": {
+            "value": ""
+          }
+        },
+        "required": true,
+        "description": {
+          "en": "IP address of the device running VLC (e.g., 192.168.1.100)"
+        }
+      },
+      {
+        "id": "port",
+        "label": {
+          "en": "HTTP Port"
+        },
+        "field": {
+          "number": {
+            "value": 8080,
+            "min": 1,
+            "max": 65535
+          }
+        },
+        "required": true,
+        "description": {
+          "en": "VLC HTTP interface port (default: 8080)"
+        }
+      },
+      {
+        "id": "password",
+        "label": {
+          "en": "Password"
+        },
+        "field": {
+          "password": {
+            "value": ""
+          }
+        },
+        "required": true,
+        "description": {
+          "en": "VLC HTTP interface password (set in VLC: Tools > Preferences > Interface > Lua)"
+        }
+      },
+      {
+        "id": "device_name",
+        "label": {
+          "en": "Device Name"
+        },
+        "field": {
+          "text": {
+            "value": ""
+          }
+        },
+        "required": true,
+        "description": {
+          "en": "Friendly name for this VLC player (e.g., Living Room PC, NVIDIA Shield)"
+        }
+      }
+    ]
+  },
+  "release_date": "2025-01-11"
+}

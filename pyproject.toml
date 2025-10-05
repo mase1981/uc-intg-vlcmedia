@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uc-intg-vlc"
+version = "1.0.0"
+description = "VLC Media Player integration for Unfolded Circle Remote Two/3"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MPL-2.0"}
+authors = [
+    {name = "Meir Miyara", email = "meir.miyara@gmail.com"}
+]
+keywords = ["vlc", "media-player", "unfolded-circle", "remote", "integration"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop", 
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL-2.0)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Home Automation",
+    "Topic :: Multimedia"
+]
+dependencies = [
+    "ucapi>=0.3.1",
+    "aiohttp>=3.8.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mase1981/uc-intg-vlc"
+"Bug Reports" = "https://github.com/mase1981/uc-intg-vlc/issues"
+"Source" = "https://github.com/mase1981/uc-intg-vlc"
+
+[tool.setuptools.packages.find]
+include = ["uc_intg_vlcmedia*"]
+
+[tool.setuptools.package-data]
+uc_intg_vlcmedia = ["*.json"]
