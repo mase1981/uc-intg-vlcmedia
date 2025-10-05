@@ -1,6 +1,6 @@
 {
-  "driver_id": "uc_intg_vlc",
-  "version": "1.0.0",
+  "driver_id": "uc_intg_vlcmedia",
+  "version": "1.0.1",
   "min_core_api": "0.20.0",
   "name": {
     "en": "VLC Media Player"
